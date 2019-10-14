@@ -116,7 +116,7 @@ function bootstrap_breadcrumb() {
             if (get_post_type() == $post_type) {
                 $cpt = get_post_type_object( $post_type );
 
-                $html .= '<li itemscope itemtype="' . $schema_link . '" class="breadcrumb-item" aria-current="page"><a href="' . esc_url( get_post_type_archive_link($post_type) ) . '" itemprop="url"><span itemprop="title">' . $cpt->labels->name . '</span></li>';
+                $html .= '<li itemscope itemtype="' . $schema_link . '" class="breadcrumb-item" aria-current="page"><a href="' . esc_url( get_post_type_archive_link($post_type) ) . '" itemprop="url"><span itemprop="title">' . $cpt->labels->name . '</span></a></li>';
             }
 
             $html .= '<li itemscope itemtype="' . $schema_link . '" class="breadcrumb-item active" aria-current="page"><span itemprop="title">' . get_the_title() . '</span></li>';
